@@ -11,7 +11,15 @@
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <label alignment="center" text="Hello World" id="4Lm-N1-Hgw"/>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Randomize!" id="eza-gq-hJH">
+                            <connections>
+                                <action selector="refreshTapped" destination="AgC-eL-Hgc" id="VNL-AR-e05"/>
+                            </connections>
+                        </button>
                     </items>
+                    <connections>
+                        <outlet property="priceLabel" destination="4Lm-N1-Hgw" id="J8G-Kt-y63"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

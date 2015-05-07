@@ -10,6 +10,8 @@
 
 
 @interface InterfaceController()
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *priceLabel;
+- (IBAction)refreshTapped;
 
 @end
 
@@ -32,6 +34,9 @@
     [super didDeactivate];
 }
 
+- (IBAction)refreshTapped {
+    [self.priceLabel setText:[NSString stringWithFormat:@"%d",arc4random_uniform(INT16_MAX)]];
+}
 @end
 
 

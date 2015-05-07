@@ -87,6 +87,7 @@
 		636C1C481AF9FCC800471769 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		636C1C4A1AF9FCC800471769 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		636C1C4C1AF9FCC800471769 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		636C1C581AFB5B6900471769 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +118,7 @@
 		636C1BFD1AF9FC8100471769 = {
 			isa = PBXGroup;
 			children = (
+				636C1C581AFB5B6900471769 /* WebKit.framework */,
 				636C1C081AF9FC8100471769 /* WatchTest */,
 				636C1C221AF9FC8100471769 /* WatchTestTests */,
 				636C1C341AF9FCC700471769 /* WatchTest WatchKit Extension */,
