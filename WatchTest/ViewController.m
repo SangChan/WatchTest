@@ -10,6 +10,7 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) IBOutlet UILabel *mirrorLabel;
 @end
 
 @implementation ViewController
@@ -17,11 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeLabel:) name:@"changeLabel" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)changeLabel:(NSNotification *)notification
+{
+    [self.mirrorLabel setText:[notification.userInfo objectForKey:@"randomNumber"]];
 }
 
 @end

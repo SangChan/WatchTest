@@ -35,9 +35,13 @@
 }
 
 - (IBAction)refreshTapped {
-    [self.priceLabel setText:[NSString stringWithFormat:@"%d",arc4random_uniform(INT16_MAX)]];
+    NSString *randomNumber = [NSString stringWithFormat:@"%d",arc4random_uniform(INT16_MAX)];
+    
+    [self.priceLabel setText:randomNumber];
+    
+    
+    NSDictionary *sendData = [NSDictionary dictionaryWithObjectsAndKeys:randomNumber,@"randomNumber",nil];
+    [WKInterfaceController openParentApplication:sendData reply:nil];
 }
 @end
-
-
 
