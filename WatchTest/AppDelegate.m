@@ -45,7 +45,25 @@
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changeLabel" object:nil userInfo:userInfo];
-    reply(@{@"primeNumber":@"11"});
+    int randomNumber = [[userInfo objectForKey:@"randomNumber"]intValue];
+    for (int i = randomNumber; i > 1; i--) {
+        if([self isPrime:i])
+            reply(@{@"primeNumber":[NSString stringWithFormat:@"%d",i]});
+    }
+    reply(@{@"primeNumber":@"2"});
+}
+
+
+-(BOOL)isPrime:(int)num
+{
+    if(num <= 1) return NO;
+    if(num == 2) return YES;
+    
+    for (int i = 2; i <= num/2; i++)
+    {
+        if(num%i == 0) return NO;
+    }
+    return YES;
 }
 
 @end

@@ -11,6 +11,7 @@
 
 @interface InterfaceController()
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *priceLabel;
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *primeNumberLabel;
 - (IBAction)refreshTapped;
 
 @end
@@ -43,6 +44,7 @@
     NSDictionary *sendData = [NSDictionary dictionaryWithObjectsAndKeys:randomNumber,@"randomNumber",nil];
     [WKInterfaceController openParentApplication:sendData reply:^(NSDictionary *replyInfo, NSError *error) {
         NSLog(@"%@ %@",replyInfo, error);
+        [self.primeNumberLabel setText:[replyInfo objectForKey:@"primeNumber"]];
     }];
 }
 @end
