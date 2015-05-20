@@ -47,8 +47,10 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changeLabel" object:nil userInfo:userInfo];
     int randomNumber = [[userInfo objectForKey:@"randomNumber"]intValue];
     for (int i = randomNumber; i > 1; i--) {
-        if([self isPrime:i])
+        if([self isPrime:i]) {
             reply(@{@"primeNumber":[NSString stringWithFormat:@"%d",i]});
+            return ;
+        }
     }
     reply(@{@"primeNumber":@"2"});
 }
