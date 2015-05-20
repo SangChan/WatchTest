@@ -41,7 +41,9 @@
     
     
     NSDictionary *sendData = [NSDictionary dictionaryWithObjectsAndKeys:randomNumber,@"randomNumber",nil];
-    [WKInterfaceController openParentApplication:sendData reply:nil];
+    [WKInterfaceController openParentApplication:sendData reply:^(NSDictionary *replyInfo, NSError *error) {
+        NSLog(@"%@ %@",replyInfo, error);
+    }];
 }
 @end
 

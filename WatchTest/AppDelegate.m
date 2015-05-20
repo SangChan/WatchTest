@@ -45,6 +45,7 @@
 - (void)application:(UIApplication *)application handleWatchKitExtensionRequest:(NSDictionary *)userInfo reply:(void (^)(NSDictionary *))reply
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:@"changeLabel" object:nil userInfo:userInfo];
+    reply(@{@"primeNumber":@"11"});
 }
 
 @end
