@@ -23,6 +23,9 @@
     [super awakeWithContext:context];
 
     // Configure interface objects here.
+    
+    [self addMenuItemWithItemIcon:WKMenuItemIconAdd title:@"더하기" action:@selector(test1:)];
+    [self addMenuItemWithItemIcon:WKMenuItemIconInfo title:@"정보" action:@selector(test1:)];
 }
 
 - (void)willActivate {
@@ -47,5 +50,11 @@
         [self.primeNumberLabel setText:[replyInfo objectForKey:@"primeNumber"]];
     }];
 }
+
+- (void)test1:(id)data
+{
+    NSLog(@"%@",data);
+}
 @end
+
 
