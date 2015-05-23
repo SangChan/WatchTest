@@ -5,5 +5,5 @@
 - [x] send message to watch app
 - [x] use force touch 
 - [ ] watch can draw opengl code
-- [ ] watch can draw core graphics code
+- [x] watch can draw core graphics code
 - [ ] watch can call core motion or core location

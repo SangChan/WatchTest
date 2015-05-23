@@ -12,6 +12,7 @@
                     <items>
                         <label alignment="center" text="Hello World" id="4Lm-N1-Hgw"/>
                         <label alignment="center" text="Prime Number" id="sWr-Cs-WdZ"/>
+                        <imageView width="1" height="30" alignment="left" id="8aC-yN-j7N"/>
                         <button width="1" alignment="center" verticalAlignment="bottom" title="Randomize!" id="eza-gq-hJH">
                             <connections>
                                 <action selector="refreshTapped" destination="AgC-eL-Hgc" id="VNL-AR-e05"/>
@@ -19,6 +20,7 @@
                         </button>
                     </items>
                     <connections>
+                        <outlet property="image" destination="8aC-yN-j7N" id="hwg-5b-kz8"/>
                         <outlet property="priceLabel" destination="4Lm-N1-Hgw" id="J8G-Kt-y63"/>
                         <outlet property="primeNumberLabel" destination="sWr-Cs-WdZ" id="WZM-lf-9zC"/>
                     </connections>
