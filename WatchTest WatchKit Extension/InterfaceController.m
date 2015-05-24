@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *primeNumberLabel;
 - (IBAction)refreshTapped;
 @property (weak, nonatomic) IBOutlet WKInterfaceImage *image;
+@property (weak, nonatomic) IBOutlet WKInterfaceButton *randomButton;
 
 @end
 
@@ -32,6 +33,12 @@
     CIColor *bottomColor = [CIColor colorWithRed:0.93 green:0.51 blue:0.23 alpha:1];
     
     [self.image setImage:[self textureWithVerticalGradientofSize:CGSizeMake(320,30) topColor:topColor bottomColor:bottomColor]];
+    
+    [self defaultButtonStyle];
+}
+
+- (void)defaultButtonStyle {
+    [self.randomButton setBackgroundColor:[UIColor blueColor]];
 }
 
 - (void)willActivate {
@@ -77,6 +84,7 @@
                                               fromRect:CGRectMake(0, 0, size.width, size.height)];
     return [UIImage imageWithCGImage:cgimg];
 }
+
 @end
 
 
