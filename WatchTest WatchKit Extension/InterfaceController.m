@@ -10,7 +10,7 @@
 
 
 @interface InterfaceController()
-@property (strong, nonatomic) IBOutlet WKInterfaceLabel *priceLabel;
+@property (strong, nonatomic) IBOutlet WKInterfaceLabel *randomNumberLabel;
 @property (strong, nonatomic) IBOutlet WKInterfaceLabel *primeNumberLabel;
 - (IBAction)refreshTapped;
 @property (weak, nonatomic) IBOutlet WKInterfaceImage *image;
@@ -54,7 +54,7 @@
 - (IBAction)refreshTapped {
     NSString *randomNumber = [NSString stringWithFormat:@"%d",arc4random_uniform(INT16_MAX)];
     
-    [self.priceLabel setText:randomNumber];
+    [self.randomNumberLabel setText:randomNumber];
     
     
     NSDictionary *sendData = [NSDictionary dictionaryWithObjectsAndKeys:randomNumber,@"randomNumber",nil];

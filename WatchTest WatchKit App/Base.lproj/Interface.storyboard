@@ -21,9 +21,9 @@
                     </items>
                     <connections>
                         <outlet property="image" destination="8aC-yN-j7N" id="hwg-5b-kz8"/>
-                        <outlet property="priceLabel" destination="4Lm-N1-Hgw" id="J8G-Kt-y63"/>
                         <outlet property="primeNumberLabel" destination="sWr-Cs-WdZ" id="WZM-lf-9zC"/>
                         <outlet property="randomButton" destination="eza-gq-hJH" id="KqI-Ta-D86"/>
+                        <outlet property="randomNumberLabel" destination="4Lm-N1-Hgw" id="Hxl-gq-XS4"/>
                     </connections>
                 </controller>
             </objects>
